@@ -1,0 +1,116 @@
+*{
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #ffff;
+}
+
+.header-form{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+/*VENTANA MODAL*/
+.modal-container{
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 500ms ease;
+    z-index: 2;
+}
+
+.modal-container .modal-form{
+    width: 50%;
+    height: 80%;
+    /*overflow: hidden;*/
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 5px 5px 12px rgba(255, 255, 255, 0.5);
+    transform: translateY(0%);
+}
+
+.modal-container .modal-form .close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+}
+
+.modal-container .modal-form .modal-txt{
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.modal-container .modal-form .container .row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-container .modal-form .container .row .form-inputs{
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: -3rem;
+    margin-bottom: 2rem;
+}
+
+.modal-container .modal-form .container .row .form-inputs legend{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.modal-container .modal-form .container .row .button-modal{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*TABLA PRODUCTOS*/
+.list-ventas{
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.5);
+}
+
+.list-ventas h3{
+    text-align: center;
+    padding: 2rem;
+}
+
+.list-ventas .container-table{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-ventas .container-table table{
+    align-items: center;
+}
