@@ -1,0 +1,192 @@
+/*VALUES*/
+$backgroundBtn: #00acee;
+
+/*FUNCTIONS*/
+
+.main{
+    .container-1{
+       flex-direction: column;
+
+        /*.container-category{
+            width: 100%;
+            background-color: red;
+            color: #ffff;
+            flex-direction: column;
+            position: fixed;
+            z-index: 2;
+        }*/
+
+        .container-products-slider{
+            .product-slider{
+                width: 90%;
+                padding: 20px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+        
+                .header-product-slider{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+        
+                    .category{
+                        width: 100%;
+        
+                        h1{
+                            font-size: 20px;
+                            color: white;
+                        }
+                    }
+                }
+                
+                .slider-btns{
+                    width: 100%;
+                    margin: 10px auto 10px auto;
+                    display: flex;
+                    justify-content: flex-end;
+        
+                    .swiper-button-next,
+                    .swiper-button-prev{
+                        margin: 10px 0px 0px 10px !important;
+                        position: static !important;
+                        transform: translate(0,0);
+                        transition: all 400ms ease;
+        
+                        &::after{
+                            font-size: 20px !important;
+                            font-weight: 800;
+                            color: #ffff;
+                        }
+        
+                        &:hover{
+                            background: rgba(255, 255, 255, 0.35);
+                        }
+                    }
+                }
+        
+                .product-slider-container{
+                    width: 100%;
+        
+                    .swiper-slide{
+                        .product-box{
+                            width: 80%;
+                            padding: 10px;
+                            border-radius: 5px;
+                            background: #ffff;
+                            position: relative;
+        
+                            .time{
+                                width: 25%;
+                                top: 0;
+                                top: 3.5%;
+                                right: 0;
+                                padding: 3px 10px;
+                                font-size: 17px;
+                                border-radius: 2px;
+                                color: white;
+                                position: absolute;
+                                background: red;
+                                transform: rotate(-90deg);
+        
+                                &::before{
+                                    content: '';
+                                    width: 80%;
+                                    height: 50%;
+                                    left: 0;
+                                    top: 0;
+                                    position: absolute;
+                                    background-color: rgba(255, 255, 255, 0.26);
+                                }
+                            }
+        
+                            .product-img-container{
+                                width: 100%;
+                                position: relative;
+                                display: flex;
+                                overflow: hidden;
+        
+                                .product-img{
+                                    width: 100%;
+                                    display: flex;
+        
+                                    a{
+                                        width: 100%;
+                                        height: 200px;
+                                        display: flex;
+        
+                                        img{
+                                            width: 100%;
+                                            height: 100%;
+                                            object-fit:contain;
+                                            object-position: center;
+                                            animation: all 400ms ease;
+                                        }
+                                    }
+                                }
+        
+                                &:hover{
+                                    .img{
+                                        transform: scale(1.10);
+                                    }
+                                }
+                            }
+        
+                            .product-box-text{
+                                .product-category{
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    flex-wrap: wrap;
+        
+                                    span{
+                                        color: #acacac;
+                                        font-size: 0.9rem;
+                                        margin:5px 0px;
+                                    }
+                                }
+        
+                                .product-title{
+                                    color: #2b2b2b;
+                                    font-weight: 600;
+                                    transition: all 400ms ease;
+                                    text-decoration: none;
+                                }
+        
+                                .price-buy{
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    margin-top: 8px;
+        
+                                    h1, span{
+                                        font-size: 1.3rem;
+                                        font-weight: 400;
+                                    }
+        
+                                    .p-buy-btn{
+                                        color: #ffff;
+                                        padding: 8px;
+                                        margin: 0px 5px;
+                                        border-radius: 5px;
+                                        background: #136BFF;
+                                    }
+                                }
+                            }
+        
+                            &:hover{
+                                .img{
+                                    transform: scale(1.10);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,371 @@
+/*TIPOGRAFIA*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
+/*VARIABLES*/
+/*FUNCIONES*/
+* {
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  color: #121110;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Nunito", sans-serif;
+  background-color: #121110;
+}
+
+/* INICIO HEADER*/
+.header {
+  width: 100%;
+  background: white;
+  /*BARRA DE HAMBURGUESA RESPONSIVE MENU*/
+}
+.header .container-navegation {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+.header .container-navegation .logo-header {
+  display: block;
+  padding: 5px 0px;
+  height: 58px;
+  transition: all 400ms ease;
+}
+.header .container-navegation .logo-header:hover {
+  transform: rotate(-5deg);
+}
+.header .container-navegation .navegation-1 ul {
+  display: inline-block;
+}
+.header .container-navegation .navegation-1 ul li {
+  display: inline-block;
+  align-items: center;
+  position: relative;
+  padding: 10px 10px;
+}
+.header .container-navegation .navegation-1 ul li a {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.header .container-navegation .navegation-1 ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0%;
+  height: 2px;
+  width: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: all 300ms ease;
+}
+.header .container-navegation .navegation-1 ul li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  height: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: all 300ms ease;
+  z-index: -1;
+}
+.header .container-navegation .navegation-1 ul li:hover a {
+  color: rgb(255, 255, 255);
+  transition-delay: 300ms;
+}
+.header .container-navegation .navegation-1 ul li:hover::after {
+  height: 100%;
+  transition-delay: 300ms;
+}
+.header .container-navegation .navegation-1 ul li:hover::before {
+  width: 100%;
+}
+.header .container-navegation .navegation-2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .container-navegation .navegation-2 .conteiner-navegation-2 {
+  padding: 0 5px;
+}
+.header .container-navegation .navegation-2 .conteiner-navegation-2 ul li {
+  display: inline-block;
+  cursor: pointer;
+  transition: all 400ms ease;
+  padding: 0 5px;
+}
+.header .container-navegation .navegation-2 .conteiner-navegation-2 ul li a {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: all 400ms ease;
+  /*
+  &:hover{
+      padding: 5px 10px;
+      border-radius: 5px;
+      background: rgba(100, 100, 100, 0.5);
+      backdrop-filter: blur(2px);
+      color: rgba(255, 255, 255, 0.8);
+
+      .fa-regular, .fa-solid{
+          color: rgba(255, 255, 255, 0.8);
+          transform: scale(1.1);
+      }
+  }*/
+}
+.header .container-navegation .navegation-2 .conteiner-navegation-2 ul li a .fa-regular, .header .container-navegation .navegation-2 .conteiner-navegation-2 ul li a .fa-solid {
+  font-size: 15px;
+  padding: 0 3px;
+}
+.header .container-navegation .navegation-2 .container-idiom a {
+  font-weight: bold;
+  margin: 5px 0;
+}
+.header .container-navegation .navegation-2 .container-idiom a .fa-sharp {
+  font-size: 15px;
+}
+.header .container-navegation .navegation-2 .container-idiom .logo-idiom {
+  margin-bottom: -3px;
+  height: 18px;
+}
+.header #nav-toggle {
+  position: absolute;
+  display: none;
+}
+.header .icon-burger {
+  display: none;
+  transform: translateY(-50%);
+  align-items: center;
+}
+.header .icon-burger .line {
+  width: 30px;
+  height: 5px;
+  background-color: black;
+  margin: 5px auto;
+  border-radius: 3px;
+  transition: all 400ms ease-in-out;
+}
+
+.footer {
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .container-footer {
+  width: 100%;
+  max-width: 1200px;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.footer .container-footer h1 {
+  margin: 2rem 0;
+  font-size: 18px;
+}
+.footer .container-footer .container-social-cards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.footer .container-footer .container-social-cards .social-card {
+  width: 125px;
+  height: 125px;
+  display: block;
+  font-size: 14px;
+  line-height: 1.5;
+  position: relative;
+  margin: 0.5rem 1rem;
+  box-shadow: 0 0 30px 15px rgba(0, 0, 0, 0.1);
+}
+.footer .container-footer .container-social-cards .social-card:last-child {
+  margin: 0;
+}
+.footer .container-footer .container-social-cards .social-card .social-card-front, .footer .container-footer .container-social-cards .social-card .social-card-back {
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.footer .container-footer .container-social-cards .social-card .social-card-front {
+  transition: all 250ms ease-in-out;
+  background-color: #fff;
+  z-index: 1;
+}
+.footer .container-footer .container-social-cards .social-card .social-card-front i {
+  font-size: 35px;
+  left: 50%;
+  top: 50%;
+  bottom: 5px;
+  position: absolute;
+  transition: all 250ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+  -moz-transition: all 250ms ease-in-out;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.footer .container-footer .container-social-cards .social-card .social-card-front .fa-youtube {
+  color: #CC0000;
+}
+.footer .container-footer .container-social-cards .social-card .social-card-front .fa-facebook {
+  color: #3b5998;
+}
+.footer .container-footer .container-social-cards .social-card .social-card-front .fa-twitter {
+  color: #00acee;
+}
+.footer .container-footer .container-social-cards .social-card .social-card-front .fa-instagram {
+  color: rgb(196, 15, 90);
+}
+.footer .container-footer .container-social-cards .social-card .social-card-front .social-card-date {
+  width: 100%;
+  bottom: 5px;
+  font-size: 15px;
+  left: 0;
+  position: absolute;
+  text-align: center;
+}
+.footer .container-footer .container-social-cards .card-animate-left .social-card-back {
+  border-radius: 3px;
+}
+.footer .container-footer .container-social-cards .card-animate-left .social-card-back .social-card-action {
+  position: absolute;
+  right: 20px;
+  bottom: 5px;
+  color: white;
+  display: block;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.footer .container-footer .container-social-cards .card-animate-left .color-action-youtube {
+  background: #CC0000;
+}
+.footer .container-footer .container-social-cards .card-animate-left:hover .social-card-front {
+  left: -30px;
+  top: -30px;
+}
+.footer .container-footer .container-social-cards .card-animate-up .social-card-back {
+  border-radius: 3px;
+}
+.footer .container-footer .container-social-cards .card-animate-up .social-card-back .social-card-action {
+  position: absolute;
+  bottom: 5px;
+  left: 35%;
+  color: white;
+  display: block;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.footer .container-footer .container-social-cards .card-animate-up .color-action-facebook {
+  background: #3b5998;
+}
+.footer .container-footer .container-social-cards .card-animate-up .color-action-twitter {
+  background: #00acee;
+}
+.footer .container-footer .container-social-cards .card-animate-up:hover .social-card-front {
+  top: -30px;
+}
+.footer .container-footer .container-social-cards .card-animate-right {
+  left: 15px;
+}
+.footer .container-footer .container-social-cards .card-animate-right .social-card-back {
+  background: white;
+  border-radius: 3px;
+}
+.footer .container-footer .container-social-cards .card-animate-right .social-card-back .social-card-action {
+  position: absolute;
+  bottom: 5px;
+  left: 20px;
+  color: white;
+  display: block;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.footer .container-footer .container-social-cards .card-animate-right .color-action-instagram {
+  background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
+}
+.footer .container-footer .container-social-cards .card-animate-right:hover .social-card-front {
+  left: 30px;
+  top: -30px;
+}
+.footer .container-footer .container-games-payment {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.footer .container-footer .container-games-payment .container-members-card {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-right: 1px solid #121110;
+}
+.footer .container-footer .container-games-payment .container-members-card .members-card h2 {
+  margin-bottom: 1rem;
+  font-size: 18px;
+}
+.footer .container-footer .container-games-payment .container-members-card .members-card ul li a {
+  font-size: 13px;
+}
+.footer .container-footer .container-games-payment .container-payment-methods {
+  width: 100%;
+}
+.footer .container-footer .container-games-payment .container-payment-methods h3 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  margin-bottom: 1.5rem;
+}
+.footer .container-footer .container-games-payment .container-payment-methods .payment-methods {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer .container-footer .container-copyright {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.footer .container-footer .container-copyright .copyright p {
+  display: block;
+  padding: 0 0.5rem;
+  font-size: 15px;
+}
+.footer .container-footer .container-copyright .container-terms ul li {
+  display: inline-block;
+  padding: 0 0.5rem;
+}
+.footer .container-footer .container-copyright .container-terms ul li a {
+  font-size: 15px;
+}
+.footer .container-footer .container-copyright .container-terms ul li a:hover {
+  border-bottom: 1px solid #121110;
+}/*# sourceMappingURL=header-footer.css.map */

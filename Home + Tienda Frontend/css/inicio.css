@@ -1,0 +1,93 @@
+.main {
+  margin-top: 4rem;
+}
+.main .container-slider {
+  width: 100%;
+  height: 81vh;
+  display: flex;
+  box-sizing: border-box;
+}
+.main .container-slider .box-slider {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  line-height: 0;
+  overflow: hidden;
+  position: relative;
+  transition: all 500ms ease;
+}
+.main .container-slider .box-slider > img {
+  width: 200%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 400ms ease;
+}
+.main .container-slider .box-slider:hover {
+  flex: 50%;
+}
+.main .container-slider .box-slider:hover > img {
+  width: 100%;
+  height: 100%;
+}
+.main .container-slider .box-slider:hover .txt-slider {
+  top: 70%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background: rgba(0, 0, 0, 0.4);
+}
+.main .container-slider .box-slider .txt-slider {
+  width: 100%;
+  height: 100%;
+  top: 90%;
+  color: white;
+  position: absolute;
+}
+.main .container-slider .box-slider .txt-slider .txt-center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.main .container-slider .box-slider .txt-slider .txt-center h1 {
+  color: rgb(255, 255, 255);
+}
+.main .container-sponsors {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* SLICK CAROUSEL - SPONSOR LOGOS */
+}
+.main .container-sponsors p {
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+.main .container-sponsors .slider-sponsor {
+  width: 35%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 2px solid rgb(255, 255, 255);
+}
+.main .container-sponsors .slider-sponsor .slide img {
+  width: 40px;
+  margin-left: 2rem;
+}
+.main .container-sponsors .slick-slide {
+  display: none;
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+.main .container-sponsors .slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+.main .container-sponsors .slick-initialized .slick-slide {
+  display: block;
+}/*# sourceMappingURL=inicio.css.map */

@@ -1,0 +1,22 @@
+.search{
+    height: 700px;
+    width: 100%;
+    background:linear-gradient(rgb(24 140 171 / 26%),rgb(93 205 217 / 52%)), url(../img/fondo-recetas.png);
+    background-size:100% 100%;  
+    background-position: center;
+    background-repeat: no-repeat;
+} 
+#form1{
+    width: 30vw;
+}
+.search .botones .btn-comida{
+    padding: 10px 40px;
+}
+.botones .btn-group input + label{
+    background-color: #28C3D4;
+    border:none;
+    color:black;
+}
+.botones .btn-group input:checked + label{
+    background-color: #0769C5;
+}
